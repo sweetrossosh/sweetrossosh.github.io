@@ -89,6 +89,7 @@
 		<div class="preloads">
 			<img id="preload1" src="" alt="">
 			<img id="preload2" src="" alt="">
+			<img src="preload.gif" alt="">
 		</div>
 		
 		<div class="photo">
@@ -131,6 +132,8 @@
 				window.location.hash = (current_index + 1).toString();
 				window.document.getElementById("cimg").classList.add("change");
 				var f = function(){
+					window.document.getElementById("cimg").src = "";
+					window.document.getElementById("cimg").src = "preload.gif"
 					window.document.getElementById("cimg").src = names[current_index];
 					window.document.getElementById("cimg").alt = "#" + (current_index + 1).toString();
 					window.document.getElementById("num").innerHTML = (current_index + 1).toString() + "/" + names.length.toString();
