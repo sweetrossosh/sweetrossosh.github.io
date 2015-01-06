@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="document-state" content="Static">
+		<meta name="generator" content="Geany 1.23.1">
+		<meta http-equiv="content-language" content="ru">
+		
+		<meta name="robots" content="none">
+		
+		<title>
+			Фотографии — торты на заказ (г. Россошь).
+		</title>
+		
+		<link href="http://fonts.googleapis.com/css?family=Oranienbaum&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			.preloads
+			{
+				position: fixed;
+				left: -1pt;
+			}
+			.preloads, .preloads img
+			{
+				width: 1pt;
+				height: 1pt;
+			}
+			body
+			{
+				background-image: url(bg.png)
+			}
+			.photo
+			{
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				text-align: center
+			}
+			#cimg
+			{
+				max-height: 100%;
+				max-width: 100%;
+				transition: opacity 0.5s linear
+			}
+			#num_str
+			{
+				position: fixed;
+				text-align: center;
+				width: 100%;
+				height: 36pt;
+				bottom: 0;
+				padding: 0;
+				left: 0;
+				font: 18pt/18pt 'Oranienbaum', serif;
+				background-image: url("../white80.png")
+			}
+			a
+			{
+				outline: none;
+				transition: color 0.5s;
+				color: #2D5BFF;
+				text-decoration: underline
+			}
+			a:hover
+			{
+				transition: color 0.5s;
+				color: red;
+				text-decoration: none
+			}
+			#left, #right
+			{
+				position: fixed;
+				top: 0;
+				height: 100%;
+				width: 50%;
+			}
+			#left{ left: 0 }
+			#right{ right: 0 }
+			.change
+			{
+				opacity: 0;
+				transition: opacity 0.5s linear;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="preloads">
+			<img id="preload1" src="" alt="">
+			<img id="preload2" src="" alt="">
+		</div>
+		
+		<div class="photo">
+			<img id="cimg" src="" alt="">
+		</div>
+		<div id="left" onclick="left()"></div>
+		<div id="right" onclick="right()"></div>
+		<div id="num_str">
+			<a href="#" onclick="left(); return false;">&lt;туда</a> <span id="num">0/0</span> <a href="#" onclick="right(); return false;">cюда&gt;</a>
+			<br>
+			<a href="http://sweetrossosh.ru/">главная</a>
+		</div>
+		<script type="text/javascript">
+			var names = ["../photos/1.jpg", "../photos/2.jpg", "../photos/3.jpg", "../photos/4.jpg", "../photos/5.jpg", "../photos/6.jpg", "../photos/7.jpg"];
+			var current_index = 0;
+			
+			function right()
+			{
+				current_index = getNextIndex(current_index, true, names.length);
+				refresh(true);
+			}
+			function left()
+			{
+				current_index = getNextIndex(current_index, false, names.length);
+				refresh(true);
+			}
+			function getNextIndex(index, positive, len)
+			{
+				var t = index + (positive?1:-1);
+				if (t < 0) t = len - 1;
+				if (t >= len) t = 0;
+				return t;
+			}
+			function refresh(anim)
+			{
+				window.location.hash = (current_index + 1).toString();
+				window.document.getElementById("cimg").classList.add("change");
+				var f = function(){
+					window.document.getElementById("cimg").src = names[current_index];
+					window.document.getElementById("cimg").alt = "#" + (current_index + 1).toString();
+					window.document.getElementById("num").innerHTML = (current_index + 1).toString() + "/" + names.length.toString();
+					window.document.getElementById("preload1").src = names[getNextIndex(current_index, true, names.length)].toString();
+					window.document.getElementById("preload2").src = names[getNextIndex(current_index, false, names.length)].toString();
+					window.document.getElementById("cimg").classList.remove("change");
+				}
+				if (anim == true) setTimeout(f, 500);
+				else f();
+			}
+			
+			if (window.location.hash.length > 1) current_index = parseInt(window.location.hash.substr(1)) - 1;
+			if ((current_index >= 0 && current_index < names.length) == false) current_index = 0;
+			refresh(false);
+		</script>
+	</body>
+</html>
