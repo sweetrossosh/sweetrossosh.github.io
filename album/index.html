@@ -137,7 +137,7 @@
 			function refresh(anim)
 			{
 				window.location.hash = (current_index + 1).toString();
-				window.document.getElementById("cimg").classList.add("change");
+				if (anim == true) window.document.getElementById("cimg").classList.add("change");
 				var f = function(){
 					window.document.getElementById("cimg").src = "";
 					window.document.getElementById("cimg").src = "preload.gif"
@@ -146,7 +146,7 @@
 					window.document.getElementById("num").innerHTML = (current_index + 1).toString() + "/" + names.length.toString();
 					window.document.getElementById("preload1").src = names[getNextIndex(current_index, true, names.length)].toString();
 					window.document.getElementById("preload2").src = names[getNextIndex(current_index, false, names.length)].toString();
-					window.document.getElementById("cimg").classList.remove("change");
+					if (anim == true) window.document.getElementById("cimg").classList.remove("change");
 				}
 				if (anim == true) setTimeout(f, 500);
 				else f();
