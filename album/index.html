@@ -19,6 +19,27 @@
 		<link href="../Oranienbaum.css" rel="stylesheet" type="text/css">
 	</head>
 	<body onkeyup="if (event.keyCode == 37 || event.keyCode == 40) left(); if (event.keyCode == 39 || event.keyCode == 38) right();">
+		<script type="text/javascript">
+			// Mouse Wheel
+			{var const_wheel_timeout = 500; // ms
+			 var body = window.document.getElementsByTagName("body")[0];
+			 var timeoff = true;
+			 var func = function(event)
+			 {
+				 if (timeoff == false) return false;
+				 event = event || window.event;
+				 var d = event.deltaY || event.deltaX || event.detail || event.wheelDelta;
+				 if (d*(event.deltaX?-1:1) > 0) left();
+				 else if (d*(event.deltaX?-1:1) < 0) right();
+				 timeoff = false;
+				 setTimeout(function(){timeoff = true;},const_wheel_timeout)
+			 }
+				if ('onwheel' in document) body.onwheel = func;
+				else if ('onmousewheel' in document) body.onmousewheel = func;
+				else if ('onMozMousePixelScroll' in document) body.onMozMousePixelScroll = func;
+			}
+		</script>
+		
 		<div class="preloads">
 			<img id="preload1" src="" alt="">
 			<img id="preload2" src="" alt="">
