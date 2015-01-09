@@ -110,7 +110,8 @@
 				var last_scroll = scrolled();
 				window.setInterval(function(){
 					if (last_scroll == scrolled()) return false;
-					e("#home").style.opacity = 1.0 - (scrolled() / windowheight);
+					var opacity = 1.0 - (scrolled() / windowheight)
+					e("#home").style.opacity = (opacity >= 0 ? opacity : 0);
 					last_scroll = scrolled();
 				}, 50);
 			}
