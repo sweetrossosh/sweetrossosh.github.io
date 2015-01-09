@@ -1,0 +1,47 @@
+@media (max-width:380pt),(max-height:320pt){
+	body
+	{
+		font: 16pt/16pt 'Oranienbaum', serif;
+	}
+	#scroll
+	{
+		top: 280pt;
+		left:0;
+	}
+	#details
+	{
+		display: none;
+	}
+	#title
+	{
+		font-size: 20pt;
+	}
+	#home
+	{
+		position: absolute;
+		max-width: 100%;
+		height: 280pt;
+		left: 0;
+		right: 0;
+		top: 0;
+		margin: 0 auto;
+		border-radius: 0;
+		padding: 0;
+	}
+}
+@media (max-width:380pt) {
+	.text
+	{
+		padding: 10pt 0;
+		width: 100%;
+	}
+	.pages img {
+		max-width: 100%;
+		min-width: 100%;
+	}
+	.pages
+	{
+		width: 100%;
+		left: 0;
+	}
+}

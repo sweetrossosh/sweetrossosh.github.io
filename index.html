@@ -17,77 +17,8 @@
 		</title>
 		<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 		<link href="http://fonts.googleapis.com/css?family=Oranienbaum&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-		<style type="text/css">
-			body{
-				background-image: url("bg.png");
-				background-attachment: fixed;
-				font: 13.5pt/13.5pt 'Oranienbaum', serif;
-				min-width: 380pt;
-				min-height: 250pt
-			}
-			.small
-			{
-				font-size: 8pt;
-			}
-			a
-			{
-				outline: none;
-				transition: color 0.5s;
-				color: #2D5BFF;
-				text-decoration: underline
-			}
-			a:hover
-			{
-				transition: color 0.5s;
-				color: red;
-				text-decoration: none
-			}
-			.pages img {
-				max-width: 380pt;
-				min-width: 380pt;
-				padding: 0;
-				margin: 0
-			}
-			#home
-			{
-				position: fixed;
-				width: 250pt;
-				height: 250pt;
-				left: 50%;
-				top: 50%;
-				margin-top: -130pt;
-				margin-left: -130pt;
-				padding: 10pt;
-				/*background-color: rgba(255,255,255,0.80);*/
-				background-image: url("white80.png");
-				text-align: center;
-				border-radius: 250pt
-			}
-			.pages
-			{
-				text-align: center;
-				width: 100%;
-				margin-bottom: -3pt
-			}
-			.text
-			{
-				display: inline-block;
-				position: relative;
-				margin: 0;
-				padding: 10pt;
-				width: 360pt;
-				/*background-color: rgba(255,255,255,0.80);*/
-				background-image: url("white80.png");
-				text-align: justify
-			}
-			#scroll
-			{
-				position: absolute;
-				width: 98%;
-				left: 1%;
-				top:150%
-			}
-		</style>
+		<link href="desktop.css" rel="stylesheet" type="text/css">
+		<link href="mobile.css" rel="stylesheet" type="text/css">
 	</head>
 	<body id="start">
 		<script type="text/javascript">
@@ -145,17 +76,15 @@
 				<br><br>
 				<img style="width: 80pt" alt="" src="logo.png">
 				<br>
-				<span style="font-size: 20px">Торты на заказ</span>
+				<span id="title">Торты на заказ</span>
 				<br>
 				г. Россошь, Воронежская обл.
 				<br>
 				+7(920)460-45-47
 				<br>
 				Наталья Николаева
-				<br>
-				<a href="#scroll" onClick="yscroll(windowheight * 1.5, function(){/*window.location.hash='scroll'*/}); return false">Подробнее</a>
-				<br>
-				<a href="album/">Каталог</a>
+				<p id="details"><a href="#scroll" onClick="yscroll(windowheight * 1.5, function(){/*window.location.hash='scroll'*/}); return false">Подробнее</a></p>
+				<p><a href="album/">Каталог</a></p>
 		</div>
 		<div id="scroll">
 			<div class="pages">

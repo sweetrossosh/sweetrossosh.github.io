@@ -1,0 +1,74 @@
+body{
+	background-image: url("bg.png");
+	background-attachment: fixed;
+	font: 13.5pt/13.5pt 'Oranienbaum', serif;
+}
+p{
+	margin: 4pt;
+}
+#title
+{
+	font-size: 18pt;
+}
+.small
+{
+	font-size: 8pt;
+}
+a
+{
+	outline: none;
+	transition: color 0.5s;
+	color: #2D5BFF;
+	text-decoration: underline
+}
+a:hover
+{
+	transition: color 0.5s;
+	color: red;
+	text-decoration: none
+}
+.pages img {
+	max-width: 380pt;
+	min-width: 380pt;
+	padding: 0;
+	margin: 0
+}
+#home
+{
+	position: fixed;
+	width: 250pt;
+	height: 250pt;
+	left: 50%;
+	top: 50%;
+	margin-top: -130pt;
+	margin-left: -130pt;
+	padding: 10pt;
+	/*background-color: rgba(255,255,255,0.80);*/
+	background-image: url("white80.png");
+	text-align: center;
+	border-radius: 250pt
+}
+.pages
+{
+	text-align: center;
+	width: 100%;
+	margin-bottom: -3pt
+}
+.text
+{
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: 10pt;
+	width: 360pt;
+	/*background-color: rgba(255,255,255,0.80);*/
+	background-image: url("white80.png");
+	text-align: justify
+}
+#scroll
+{
+	position: absolute;
+	width: 98%;
+	left: 1%;
+	top:150%
+}
