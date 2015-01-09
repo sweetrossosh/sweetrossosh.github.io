@@ -40,10 +40,13 @@
 			{
 				var last_scroll = scrolled();
 				window.setInterval(function(){
-					if (last_scroll == scrolled()) return false;
-					var opacity = 1.0 - (scrolled() / windowheight)
+					var opacity = 1.0;
+					if (windowheight > 360){ // no mobile
+						if (last_scroll == scrolled()) return false;
+						opacity = 1.0 - (scrolled() / windowheight)
+						last_scroll = scrolled();
+					}
 					e("#home").style.opacity = (opacity >= 0 ? opacity : 0);
-					last_scroll = scrolled();
 				}, 50);
 			}
 						
