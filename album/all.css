@@ -12,15 +12,6 @@ body
 	width: 1pt;
 	height: 1pt;
 }
-.photo
-{
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	text-align: center
-}
 #cimg
 {
 	position: absolute; 
@@ -32,6 +23,15 @@ body
 	max-height: 100%;
 	max-width: 100%;
 	transition: opacity 0.5s linear;
+}
+#preload_anim
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 #num_str
 {

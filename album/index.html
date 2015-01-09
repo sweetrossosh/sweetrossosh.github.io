@@ -21,19 +21,21 @@
 		<div class="preloads">
 			<img id="preload1" src="" alt="">
 			<img id="preload2" src="" alt="">
-			<img src="preload.gif" alt="">
 		</div>
 		
-		<div class="photo">
-			<img id="cimg" src="preload.gif" alt="">
-		</div>
+		<div><img id="preload_anim" src="preload.gif" alt="Loading..."></div>
+		
+		<div><img id="cimg" src="" alt=""></div>
+		
 		<div id="left" onclick="left()"></div>
 		<div id="right" onclick="right()"></div>
+		
 		<div id="num_str">
 			<a href="#" onclick="left(); return false;">&lt;туда</a> <span id="num">0/0</span> <a href="#" onclick="right(); return false;">cюда&gt;</a>
 			<br>
 			<a href="../">главная</a>
 		</div>
+		
 		<script type="text/javascript">
 			var names = ["../photos/1.jpg", "../photos/2.jpg",
 			             "../photos/3.jpg", "../photos/4.jpg",
@@ -66,13 +68,17 @@
 				if (anim == true) window.document.getElementById("cimg").classList.add("change");
 				var f = function(){
 					window.document.getElementById("cimg").src = "";
-					window.document.getElementById("cimg").src = "preload.gif"
+					window.document.getElementById("cimg").onload = function()
+					{
+						window.document.getElementById("preload_anim").style.display = "none";
+						if (anim == true) window.document.getElementById("cimg").classList.remove("change");
+					}
+					window.document.getElementById("preload_anim").style.display = "";
 					window.document.getElementById("cimg").src = names[current_index];
 					window.document.getElementById("cimg").alt = "#" + (current_index + 1).toString();
 					window.document.getElementById("num").innerHTML = (current_index + 1).toString() + "/" + names.length.toString();
 					window.document.getElementById("preload1").src = names[getNextIndex(current_index, true, names.length)].toString();
 					window.document.getElementById("preload2").src = names[getNextIndex(current_index, false, names.length)].toString();
-					if (anim == true) window.document.getElementById("cimg").classList.remove("change");
 				}
 				if (anim == true) setTimeout(f, 500);
 				else f();
