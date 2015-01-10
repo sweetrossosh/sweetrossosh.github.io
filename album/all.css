@@ -70,13 +70,15 @@ a:hover
 }
 #left
 {
-	background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-prev.png);
+	/*background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-prev.png);*/
+	background-image: url(../prev.png);
 	background-position: center left;
 }
 
 #right
 {
-	background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-next.png);
+	/*background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-next.png);*/
+	background-image: url(../next.png);
 	background-position: center right;
 }
 #left:hover, #right:hover
