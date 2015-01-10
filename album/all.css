@@ -60,10 +60,29 @@ a:hover
 }
 #left, #right
 {
+	background-repeat: no-repeat;
+	opacity: 0.5;
 	position: fixed;
 	bottom: 36pt;
 	height: 100%;
 	width: 45%;
+	transition: opacity 0.5s linear;
+}
+#left
+{
+	background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-prev.png);
+	background-position: center left;
+}
+
+#right
+{
+	background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-next.png);
+	background-position: center right;
+}
+#left:hover, #right:hover
+{
+	transition: opacity 0.5s linear;
+	opacity: 1.0;
 }
 #left{ left: 0 }
 #right{ right: 0 }
