@@ -10,9 +10,11 @@ p{
 {
 	font-size: 18pt;
 }
-.small
+.hr
 {
-	font-size: 8pt
+	width: 380pt;
+	margin: 0 auto;
+	background-image: url("bg2.png");
 }
 a
 {

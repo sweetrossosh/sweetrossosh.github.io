@@ -40,7 +40,7 @@
 		max-width: 100%;
 		min-width: 100%
 	}
-	.pages
+	.pages, .hr
 	{
 		width: 100%;
 		left: 0
