@@ -40,6 +40,7 @@
 			}
 		</script>
 		
+		
 		<div class="preloads">
 			<img id="preload1" src="" alt="">
 			<img id="preload2" src="" alt="">
@@ -52,25 +53,48 @@
 		<div id="left" onclick="left()"></div>
 		<div id="right" onclick="right()"></div>
 		
-		<div id="num_str">
+		<div style="bottom: 0; height: 36pt;" class="num_str">
 			<a href="#" onclick="left(); return false;">&lt;туда</a> <span id="num">0/0</span> <a href="#" onclick="right(); return false;">cюда&gt;</a>
 			<br>
 			<a href="../">главная</a>
 		</div>
 		
 		<script type="text/javascript" src="photos.js"></script>
+		
+		<div style="top: 0; font-size: 12pt;" id="cats" class="num_str">
+			<script type="text/javascript">
+				for (var X = 0; X < cat.length; ++X)
+				{
+					var e = document.createElement("a");
+					e.id = "cat" + (X + 1).toString();
+					e.href = "#" + cat[X].index.left.toString();
+					e.onclick = function(){
+						var Y = this.id.substr(3) - 1;
+						Y = cat[Y].index;
+						setI(Y.left - 1);
+						return false;
+					};
+					e.innerHTML = cat[X].value;
+					window.document.getElementById("cats").appendChild(e);
+				}
+			</script>
+		</div>
+		
 		<script type="text/javascript">
 			var current_index = 0;
 			
+			function setI(I)
+			{
+				current_index = I;
+				refresh(true);
+			}
 			function right()
 			{
-				current_index = getNextIndex(current_index, true, names.length);
-				refresh(true);
+				setI(getNextIndex(current_index, true, names.length));
 			}
 			function left()
 			{
-				current_index = getNextIndex(current_index, false, names.length);
-				refresh(true);
+				setI(getNextIndex(current_index, false, names.length));
 			}
 			function getNextIndex(index, positive, len)
 			{
@@ -83,6 +107,21 @@
 			{
 				window.location.hash = (current_index + 1).toString();
 				if (anim == true) window.document.getElementById("cimg").classList.add("change");
+				
+				// category
+				for(var X = 0; X < cat.length; ++X)
+				{
+					var cat_e = window.document.getElementById("cat" + (X + 1).toString());
+					if (cat_e.classList.contains("cat_current"))
+					{
+						//alert(X);
+						cat_e.classList.remove("cat_current");
+					}
+					if (cat[X].index.left <= current_index + 1)
+						if (cat[X].index.right >= current_index + 1)
+							cat_e.classList.add("cat_current");
+				}
+					
 				var f = function(){
 					window.document.getElementById("cimg").src = "";
 					window.document.getElementById("cimg").onload = function()
@@ -91,11 +130,11 @@
 						if (anim == true) window.document.getElementById("cimg").classList.remove("change");
 					}
 					window.document.getElementById("preload_anim").style.display = "";
-					window.document.getElementById("cimg").src = names[current_index];
+					window.document.getElementById("cimg").src = names[current_index][0];
 					window.document.getElementById("cimg").alt = "#" + (current_index + 1).toString();
 					window.document.getElementById("num").innerHTML = (current_index + 1).toString() + "/" + names.length.toString();
-					window.document.getElementById("preload1").src = names[getNextIndex(current_index, true, names.length)].toString();
-					window.document.getElementById("preload2").src = names[getNextIndex(current_index, false, names.length)].toString();
+					window.document.getElementById("preload1").src = names[getNextIndex(current_index, true, names.length)][0].toString();
+					window.document.getElementById("preload2").src = names[getNextIndex(current_index, false, names.length)][0].toString();
 				}
 				if (anim == true) setTimeout(f, 500);
 				else f();

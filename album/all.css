@@ -33,17 +33,24 @@ body
 	bottom: 0;
 	margin: auto;
 }
-#num_str
+.num_str
 {
 	position: fixed;
 	text-align: center;
 	width: 100%;
-	height: 36pt;
-	bottom: 0;
 	padding: 0;
 	left: 0;
 	font: 18pt/18pt 'Oranienbaum', serif;
 	background-image: url("../white80.png")
+}
+.cat_current
+{
+	color: black;
+}
+#cats a
+{
+	margin-left: 5pt;
+	margin-right: 5pt;
 }
 a
 {
