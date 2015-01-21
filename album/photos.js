@@ -8,7 +8,7 @@ var names = [["../photos/difficult/58R35XON.jpg", 0],
 			 ["../photos/childrens/3312QVVU.jpg", 2],
 			 ["../photos/childrens/B14D80A0.jpg", 2],
 			 ["../photos/childrens/GZU0OCS1.jpg", 2],
-			 ["../photos/other/QGNOPPFH.jpg", 3]
+			 ["../photos/other/QGNOPPFH.jpg", 3],
 			 ["../photos/other/ANKBRLGX.jpg", 3],
 			 ["../photos/other/MWKZPUKC.jpg", 3],
 			 ["../photos/other/U2KWFIRC.jpg", 3]];
