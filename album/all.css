@@ -79,21 +79,19 @@ a:hover
 	background-repeat: no-repeat;
 	opacity: 0.5;
 	position: fixed;
-	bottom: 36pt;
+	bottom: 32pt;
 	height: 100%;
 	width: 45%;
 	transition: opacity 0.5s linear;
 }
 #left
 {
-	/*background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-prev.png);*/
 	background-image: url(prev.png);
 	background-position: center left;
 }
 
 #right
 {
-	/*background-image: url(http://www.eminem.com/sites/deveminem.umg.edrupalgardens.com/files/201310/carousel-nav-next.png);*/
 	background-image: url(next.png);
 	background-position: center right;
 }
