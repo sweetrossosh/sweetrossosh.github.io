@@ -1,5 +1,6 @@
 var names = [["../photos/difficult/58R35XON.jpg", 0],
              ["../photos/difficult/EEQDAT5C.jpg", 0],
+             ["../photos/holidays/QVADL8W0.jpg", 1],
 			 ["../photos/holidays/2S4UAM79.jpg", 1],
 			 ["../photos/holidays/K8OMQMMB.jpg", 1],
 			 ["../photos/holidays/KWLIBIKX.jpg", 1],
