@@ -14,7 +14,8 @@ var names = [["../photos/difficult/58R35XON.jpg", 0],
 			 ["../photos/other/QGNOPPFH.jpg", 3],
 			 ["../photos/other/ANKBRLGX.jpg", 3],
 			 ["../photos/other/MWKZPUKC.jpg", 3],
-			 ["../photos/other/U2KWFIRC.jpg", 3]];
+			 ["../photos/other/U2KWFIRC.jpg", 3],
+			 ["../photos/other/ZJGV530W.jpg", 3]];
 			 
 names.sort(function sf(A, B){
 	return A[1] > B[1];
