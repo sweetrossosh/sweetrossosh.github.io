@@ -20,6 +20,11 @@
 		<link href="desktop.css" rel="stylesheet" type="text/css">
 		<link href="mobile.css" rel="stylesheet" type="text/css">
 		<link href="Oranienbaum.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript">
+			dx = 10; // синхронизация кол-ва сделанных тортов
+		</script>
+		
 	</head>
 	<body id="start">
 		<script type="text/javascript">
@@ -145,7 +150,7 @@
 					Мы сделали слаще Россошь уже на <noscript><div style="display: inline;">несметное число</div></noscript><script type="text/javascript">
 						var mcounter = (new Date()).getTime() - (new Date("1 December 2014 00:00")).getTime();
 						mcounter = Math.floor(mcounter / 100000000 / 2) + 9;
-						document.write(mcounter);
+						document.write(mcounter + dx);
 					</script> торт<script type="text/javascript">
 						if (mcounter % 10 > 4 || mcounter  % 10 == 0) document.write("ов");
 						else if (mcounter % 10 >= 2) document.write("a");
