@@ -22,7 +22,9 @@
 		<link href="Oranienbaum.css" rel="stylesheet" type="text/css">
 		
 		<script type="text/javascript">
-			dx = 0; // синхронизация кол-ва сделанных тортов
+			// синхронизация кол-ва сделанных тортов
+			date_sync = "14 April 2015 00:00";
+			x_sync = 67;
 		</script>
 		
 	</head>
@@ -148,9 +150,10 @@
 			<div class="pages">
 				<div class="text" style="text-align: center;">
 					Мы сделали слаще Россошь уже на <noscript><div style="display: inline;">несметное число</div></noscript><script type="text/javascript">
-						var mcounter = (new Date()).getTime() - (new Date("1 December 2014 00:00")).getTime();
-						mcounter = Math.floor(mcounter / 100000000 / 2) + 9;
-						document.write(mcounter + dx);
+						var mcounter = (new Date()).getTime() - (new Date(date_sync)).getTime();
+						mcounter = Math.floor(mcounter / 100000000 / 2);
+						mcounter = (mcounter > 0 ? mcounter : 0) + x_sync
+						document.write(mcounter);
 					</script> торт<script type="text/javascript">
 						if (mcounter % 10 > 4 || mcounter  % 10 == 0) document.write("ов");
 						else if (mcounter % 10 >= 2) document.write("a");
