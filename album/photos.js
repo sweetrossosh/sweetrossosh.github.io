@@ -16,6 +16,8 @@ var names = [["../photos/difficult/58R35XON.jpg", 0],
 			 ["../photos/other/MWKZPUKC.jpg", 3],
 			 ["../photos/other/U2KWFIRC.jpg", 3],
 			 ["../photos/other/ZJGV530W.jpg", 3],
+			 ["../photos/other/AFCXZKAA.jpg", 3],
+			 ["../photos/other/BYAECSLU.jpg", 3],
 			 ["../photos/photocakes/TSK2UVN8.jpg", 4],
 			 ["../photos/photocakes/OXICJTNK.jpg", 4],
 			 ["../photos/photocakes/HAKHLYMD.jpg", 4]];
