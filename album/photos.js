@@ -1,5 +1,6 @@
 var names = [["../photos/difficult/58R35XON.jpg", 0],
              ["../photos/difficult/EEQDAT5C.jpg", 0],
+             ["../photos/difficult/3PDNWN5F.jpg", 0],
              ["../photos/holidays/QVADL8W0.jpg", 1],
 			 ["../photos/holidays/2S4UAM79.jpg", 1],
 			 ["../photos/holidays/K8OMQMMB.jpg", 1],
@@ -43,8 +44,8 @@ var names = [["../photos/difficult/58R35XON.jpg", 0],
 			 ["../photos/photocakes/Y5J4IXF9.jpg", 4],
 			 ["../photos/photocakes/FGQ4A5XQ.jpg", 4],
 			 ["../photos/photocakes/L6ZVMUXU.jpg", 4],
-			 ["../photos/photocakes/AE9DBRJK.jpg", 4]];
-			 
+			 ["../photos/photocakes/AE9DBRJK.jpg", 4],
+			 ["../photos/photocakes/SNGUSJNV.jpg", 4]]; 
 names.sort(function sf(A, B){
 	return A[1] > B[1];
 });
