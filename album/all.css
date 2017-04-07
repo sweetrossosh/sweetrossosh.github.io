@@ -31,6 +31,7 @@ body
 	bottom: 0;
 	max-height: 100%;
 	max-width: 100%;
+	opacity: 1.0;
 	transition: opacity 0.5s linear;
 }
 #preload_anim
@@ -104,6 +105,6 @@ a:hover
 #right{ right: 0 }
 .change
 {
-	opacity: 0;
+	opacity: 0 !important;
 	transition: opacity 0.5s linear;
 }
