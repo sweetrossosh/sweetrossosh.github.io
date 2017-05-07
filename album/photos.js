@@ -33,7 +33,6 @@ function load_album(album_id){
 }
 
 function vkCallbackFunc(result) {
-	console.log(result);
 	cat[album_i].index.left = names.length+1;
 	names = names.concat(
 		result["response"].map(function(e){
