@@ -1,110 +1,47 @@
-var names = [["../photos/difficult/58R35XON.jpg", 0],
-             ["../photos/difficult/EEQDAT5C.jpg", 0],
-             ["../photos/difficult/3PDNWN5F.jpg", 0],
-             ["../photos/holidays/QVADL8W0.jpg", 1],
-			 ["../photos/holidays/2S4UAM79.jpg", 1],
-			 ["../photos/holidays/K8OMQMMB.jpg", 1],
-			 ["../photos/holidays/KWLIBIKX.jpg", 1],
-			 ["../photos/holidays/L3TRITJD.jpg", 1],
-			 ["../photos/childrens/R8DE0F6G.jpg", 2],
-			 ["../photos/childrens/QIOAOW3F.jpg", 2],
-			 ["../photos/childrens/8CYRBBGX.jpg", 2],
-			 ["../photos/childrens/3312QVVU.jpg", 2],
-			 ["../photos/childrens/B14D80A0.jpg", 2],
-			 ["../photos/childrens/GZU0OCS1.jpg", 2],
-			 ["../photos/childrens/HMWMRNLR.jpg", 2],
-			 ["../photos/childrens/F4D3Y5VM.jpg", 2],
-			 ["../photos/childrens/EWKZC7HK.jpg", 2],
-			 ["../photos/childrens/D18WMY77.jpg", 2],
-			 ["../photos/childrens/ES8TYUB7.jpg", 2],
-			 ["../photos/childrens/WCK2VNEJ.jpg", 2],
-			 ["../photos/childrens/HSFPRKD3.jpg", 2],
-			 ["../photos/childrens/ROQZQYPA.jpg", 2],
-			 ["../photos/childrens/B74YZUUW.jpg", 2],
-			 ["../photos/childrens/7LKBL2DV.jpg", 2],
-			 ["../photos/childrens/GDK07YFQ.jpg", 2],
-			 ["../photos/childrens/TTABQII1.jpg", 2],
-			 ["../photos/childrens/XPH7EJGG.jpg", 2],
-			 ["../photos/childrens/J3T4LM3B.jpg", 2],
-			 ["../photos/childrens/BV70YDR7.png", 2],
-			 ["../photos/childrens/R43L1PWT.jpg", 2],
-			 ["../photos/childrens/8ZOL6YQQ.jpg", 2],
-			 ["../photos/childrens/P32AITKU.jpg", 2],
-			 ["../photos/childrens/9BT4U0V6.jpg", 2],
-			 ["../photos/childrens/Q1Q8F96O.jpg", 2],
-			 ["../photos/childrens/4T4SWRRD.jpg", 2],
-			 ["../photos/other/QGNOPPFH.jpg", 3],
-			 ["../photos/other/ANKBRLGX.jpg", 3],
-			 ["../photos/other/MWKZPUKC.jpg", 3],
-			 ["../photos/other/U2KWFIRC.jpg", 3],
-			 ["../photos/other/ZJGV530W.jpg", 3],
-			 ["../photos/other/AFCXZKAA.jpg", 3],
-			 ["../photos/other/BYAECSLU.jpg", 3],
-			 ["../photos/other/XVMM65GF.jpg", 3],
-			 ["../photos/other/C5MNKUAM.jpg", 3],
-			 ["../photos/other/Z4KWDKNW.jpg", 3],
-			 ["../photos/other/IY7M8I1P.jpg", 3],
-			 ["../photos/other/D6LII52C.png", 3],
-			 ["../photos/other/FXRW9TTV.jpg", 3],
-			 ["../photos/other/PC4BAX53.png", 3],
-			 ["../photos/other/WPBH1EFD.png", 3],
-			 ["../photos/other/IHCBNH8Z.jpg", 3],
-			 ["../photos/other/JY1SOKXE.jpg", 3],
-			 ["../photos/other/BSF9KDND.jpg", 3],
-			 ["../photos/other/MV20D298.jpg", 3],
-			 ["../photos/other/15BKEL7B.jpg", 3],
-			 ["../photos/other/BZ8J16QR.jpg", 3],
-			 ["../photos/other/CEUTNKEA.jpg", 3],
-			 ["../photos/other/U7NWOJGC.jpg", 3],
-			 ["../photos/other/3NGXOEFP.jpg", 3],
-			 ["../photos/other/ULQBKL89.jpg", 3],
-			 ["../photos/other/YBRI2SAH.jpg", 3],
-			 ["../photos/other/51ZG7BM6.jpg", 3],
-			 ["../photos/other/VFHE89OV.jpg", 3],
-			 ["../photos/photocakes/TSK2UVN8.jpg", 4],
-			 ["../photos/photocakes/OXICJTNK.jpg", 4],
-			 ["../photos/photocakes/HAKHLYMD.jpg", 4],
-			 ["../photos/photocakes/JVIIYNSL.jpg", 4],
-			 ["../photos/photocakes/Y5J4IXF9.jpg", 4],
-			 ["../photos/photocakes/FGQ4A5XQ.jpg", 4],
-			 ["../photos/photocakes/L6ZVMUXU.jpg", 4],
-			 ["../photos/photocakes/AE9DBRJK.jpg", 4],
-			 ["../photos/photocakes/SNGUSJNV.jpg", 4],
-			 ["../photos/photocakes/0CDP4Y12.jpg", 4]];
-/*names.sort(function sf(A, B){
-	return A[1] > B[1];
-});*/
+var OWNER_ID = "-146480406"
+var names = [];
 
 var cat = [
 	{
 		index: {left: -1, right: -1
-		},value: "Многоярусные" // 0
+		},value: "Фототорты",
+		album_id: "244710683" // 0
 	},
 	{
 		index: {left: -1, right: -1
-		},value: "Тематические" // 1
+		},value: "Разные",
+		album_id: "244710593" // 1
 	},
 	{
 		index: {left: -1, right: -1
-		},value: "Детские" // 2
-	},
-	{
-		index: {left: -1, right: -1
-		},value: "Разные" // 3
-	},
-	{
-		index: {left: -1, right: -1
-		},value: "Фототорты" // 4
+		},value: "Детские",
+		album_id: "244710660" // 2
 	}
 ];
 
-var J = -1;
-for(var X = 0; X < names.length; ++X)
-{
-	if (names[X][1] != J)
-	{
-		J = names[X][1];
-		cat[J].index.left = X+1;
+
+var album_i = 0;
+function photos_init(){
+	load_album(cat[album_i].album_id);
+}
+
+function load_album(album_id){
+	var script = document.createElement('SCRIPT'); 
+	script.src = "https://api.vk.com/method/getPhotos?photo_sizes=1&extended=0&owner_id=" + OWNER_ID +
+				 "&album_id=" + album_id + "&callback=vkCallbackFunc"; 
+	document.getElementsByTagName("head")[0].appendChild(script); 
+}
+
+function vkCallbackFunc(result) {
+	console.log(result);
+	cat[album_i].index.left = names.length+1;
+	names = names.concat(
+		result["response"].map(function(e){
+			return [e.sizes[e.sizes.length-1].src, album_i];
+		})
+	)
+	cat[album_i].index.right = names.length
+	if (album_i < cat.length-1){
+		load_album(cat[++album_i].album_id);
 	}
-	cat[J].index.right = X+1;
 }
