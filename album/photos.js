@@ -2,20 +2,30 @@ var OWNER_ID = "-146480406"
 var names = [];
 
 var cat = [
+  {
+    index: {left: -1, right: -1
+		},value: "Свадебные",
+		album_id: "250686463" // 0
+  },
 	{
 		index: {left: -1, right: -1
 		},value: "Фототорты",
-		album_id: "244710683" // 0
+		album_id: "244710683" // 1
 	},
+  {
+    index: {left: -1, right: -1
+		},value: "Для мужчин",
+		album_id: "250686457" // 2
+  },
 	{
 		index: {left: -1, right: -1
 		},value: "Разные",
-		album_id: "244710593" // 1
+		album_id: "244710593" // 3
 	},
 	{
 		index: {left: -1, right: -1
 		},value: "Детские",
-		album_id: "244710660" // 2
+		album_id: "244710660" // 4
 	}
 ];
 
