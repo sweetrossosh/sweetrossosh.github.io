@@ -1,7 +1,4 @@
 User-agent: *
 Disallow: /
 Allow: /$
-Allow: /photos
-Allow: /mobile.css
-Allow: /desktop.css
 Host: sweetrossosh.ru
